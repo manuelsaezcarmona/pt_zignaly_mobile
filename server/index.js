@@ -2,6 +2,7 @@ import express from 'express';
 import morgan from 'morgan';
 import dotenv from 'dotenv';
 import cors from 'cors';
+import { router as phonesRoutes } from './routes/phones.route.js';
 import { connectDB } from './db/dbconnect.js';
 
 dotenv.config();
@@ -24,6 +25,8 @@ const template = `
 app.get('/', (req, res) => {
   res.send(template);
 });
+
+app.use('/phones', phonesRoutes);
 
 app.listen(port, () => {
   // eslint-disable-next-line no-console
