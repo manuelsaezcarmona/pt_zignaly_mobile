@@ -6,9 +6,10 @@ dotenv.config();
 export async function connectDB() {
   const user = process.env.DB_USER;
   const pass = process.env.DB_PASS;
+  const cluster = process.env.DB_CLUSTER;
   const databaseName = process.env.DB_NAME;
   try {
-    const uri = `mongodb+srv://${user}:${pass}@manucluster0.xmenl.mongodb.net/${databaseName}`;
+    const uri = `mongodb+srv://${user}:${pass}${cluster}${databaseName}`;
     // Para realizar la conexion
     console.log(uri);
 
