@@ -1,4 +1,5 @@
-const Phone = require('../models/phone.model');
+import { Phone } from '../models/phone.model.js';
+// const Phone = require('../models/phone.model');
 
 export async function getAllPhones(req, res, next) {
   try {
