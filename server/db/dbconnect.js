@@ -10,8 +10,6 @@ export async function connectDB() {
   const databaseName = process.env.DB_NAME;
   try {
     const uri = `mongodb+srv://${user}:${pass}${cluster}${databaseName}`;
-    // Para realizar la conexion
-    console.log(uri);
 
     const mongooseConnect = await mongoose.connect(uri);
     console.log(`conectado a ${databaseName}`);
