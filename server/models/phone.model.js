@@ -1,5 +1,4 @@
 import mongoose from 'mongoose';
-// const { model, Schema } = require('mongoose');
 
 const phoneSchema = new mongoose.Schema({
   title: {

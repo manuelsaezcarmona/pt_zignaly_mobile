@@ -5,13 +5,15 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "start": "cross-env PORT=3100 NODE_ENV=dev nodemon",
-    "test": "cross-env NODE_ENV=test jest --watchAll --collect-coverage",
+    "start": "cross-env PORT=3100 nodemon",
+    "test": "cross-env  PORT=3100 jest",
+    "testcover": "cross-env PORT=3100 jest --watchAll --collect-coverage",
     "lint": "eslint"
   },
   "author": "Manuel Saez Carmona",
   "license": "ISC",
   "dependencies": {
+    "@babel/plugin-transform-modules-commonjs": "^7.16.8",
     "cors": "^2.8.5",
     "cross-env": "^7.0.3",
     "dotenv": "^16.0.0",
@@ -29,5 +31,14 @@
     "eslint-config-airbnb-base": "^15.0.0",
     "eslint-plugin-import": "^2.25.4",
     "lint": "^0.7.0"
+  },
+  "babel": {
+    "env": {
+      "test": {
+        "plugins": [
+          "@babel/plugin-transform-modules-commonjs"
+        ]
+      }
+    }
   }
 }

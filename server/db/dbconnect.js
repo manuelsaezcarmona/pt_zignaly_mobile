@@ -12,6 +12,7 @@ export async function connectDB() {
     const uri = `mongodb+srv://${user}:${pass}${cluster}${databaseName}`;
 
     const mongooseConnect = await mongoose.connect(uri);
+    // eslint-disable-next-line no-console
     console.log(`conectado a ${databaseName}`);
     return mongooseConnect;
   } catch (error) {
