@@ -12,6 +12,7 @@
   },
   "rules": {
     "import/prefer-default-export": "off",
-    "comma-dangle": [2, "never"]
+    "comma-dangle": [2, "never"],
+    "import/extensions": "off"
   }
 }

@@ -2,11 +2,14 @@ import express from 'express';
 import morgan from 'morgan';
 import dotenv from 'dotenv';
 import cors from 'cors';
-
-export const app = express();
-const port = process.env.PORT || 3001;
+import { connectDB } from './db/dbconnect.js';
 
 dotenv.config();
+
+const port = process.env.PORT || 3001;
+export const app = express();
+
+connectDB();
 
 app.use(express.json());
 app.use(morgan('dev'));
