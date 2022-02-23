@@ -18,4 +18,13 @@ describe('Given the phones services', () => {
     const result = await getPhones();
     expect(result).toEqual(phonesdata);
   });
+  test('When the API crash should return a error ', async () => {
+    jest.mock('axios');
+    axios.get = jest.fn().mockRejectedValue();
+    try {
+      await getPhones();
+    } catch (err) {
+      expect(err).toBeDefined();
+    }
+  });
 });

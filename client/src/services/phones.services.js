@@ -6,8 +6,7 @@ export async function getPhones() {
   try {
     const response = await axios.get(`${url}/phones`);
     return response.data;
-  } catch (error) {
-    console.log(error);
-    return error;
+  } catch (err) {
+    throw new Error('GetPhones Error', err);
   }
 }
