@@ -1,9 +1,11 @@
 import './App.css';
+import { PhoneListContainer } from './components/PhoneListContainer/PhoneListContainer';
 
 function App() {
   return (
-    <div className="App">
-      <h1>Empieza el Challenge</h1>
+    <div className="App container-fluid">
+      <h1 className="header">Mobile Gallery</h1>
+      <PhoneListContainer />
     </div>
   );
 }
