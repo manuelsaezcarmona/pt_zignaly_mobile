@@ -3,7 +3,7 @@
 import { useEffect, useState } from 'react';
 import { Container, Row, Col, Image } from 'react-bootstrap';
 import { useSelector } from 'react-redux';
-import { useParams } from 'react-router-dom';
+import { useParams, Link } from 'react-router-dom';
 
 export function PhoneDetailComponent() {
   const phones = useSelector(store => store.phones);
@@ -27,6 +27,9 @@ export function PhoneDetailComponent() {
           <p>Brand: {phoneState.brand}</p>
           <p>color: {phoneState.color}</p>
           <p>price: {phoneState.price}</p>
+          <Link to="/" style={{ textDecoration: 'none' }}>
+            Ir a Home
+          </Link>
         </Col>
       </Row>
     </Container>
