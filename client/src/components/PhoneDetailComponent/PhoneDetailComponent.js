@@ -1,7 +1,7 @@
 /* eslint-disable object-curly-newline */
 /* eslint-disable arrow-parens */
 import { useEffect, useState } from 'react';
-import { Container, Row, Col, Image } from 'react-bootstrap';
+import { Container, Row, Col, Image, Button } from 'react-bootstrap';
 import { useSelector } from 'react-redux';
 import { useParams, Link } from 'react-router-dom';
 
@@ -28,7 +28,7 @@ export function PhoneDetailComponent() {
           <p>color: {phoneState.color}</p>
           <p>price: {phoneState.price}</p>
           <Link to="/" style={{ textDecoration: 'none' }}>
-            Ir a Home
+            <Button variant="primary">Go to Gallery</Button>
           </Link>
         </Col>
       </Row>
