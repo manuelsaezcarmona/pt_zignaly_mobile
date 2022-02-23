@@ -14,10 +14,8 @@ export function PhoneListContainer() {
 
   return (
     <div className="PhoneList container-fluid">
-      <p>Prueba de Phones</p>
-      <p>{phones.length}</p>
       {phones.map(phone => (
-        <PhoneCard key={phone._id} item={phone} />
+        <PhoneCard key={`pho-${phone._id}`} item={phone} />
       ))}
     </div>
   );
