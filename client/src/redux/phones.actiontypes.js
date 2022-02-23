@@ -1,0 +1,4 @@
+export const actionTypes = {
+  LOAD_PHONES: 'LOAD_PHONES',
+  FAILED_LOAD_PHONES: 'FAILED_LOAD_PHONES'
+};

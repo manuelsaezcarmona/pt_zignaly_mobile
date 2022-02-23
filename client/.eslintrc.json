@@ -16,6 +16,10 @@
   "rules": {
     "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
     "react/jsx-one-expression-per-line": "off",
-    "comma-dangle": [2, "never"]
+    "comma-dangle": [2, "never"],
+    "import/prefer-default-export": "off",
+    "default-param-last": "off",
+    "no-underscore-dangle": "off",
+    "react/prop-types": "off"
   }
 }

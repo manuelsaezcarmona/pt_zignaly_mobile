@@ -1,11 +1,10 @@
 {
   "name": "pt_zignaly",
   "version": "1.0.0",
-  "private": "true",
   "description": "Cool Phones",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified, You are on root directory\" && exit 1"
   },
   "keywords": [],
   "author": "Manuel Saez Carmona",
