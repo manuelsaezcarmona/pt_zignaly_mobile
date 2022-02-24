@@ -1,3 +1,4 @@
+/* eslint-disable func-names */
 /* eslint-disable react/prop-types */
 /* eslint-disable react/jsx-filename-extension */
 import { render as rtlRender } from '@testing-library/react';
