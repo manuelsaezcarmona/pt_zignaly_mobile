@@ -22,7 +22,7 @@ export function PhoneListContainer() {
       {loading ? (
         phones.map(phone => <PhoneCard key={`pho-${phone._id}`} item={phone} />)
       ) : (
-        <Spinner animation="border" />
+        <Spinner animation="border" data-testid="phone-spinner" />
       )}
     </Container>
   );

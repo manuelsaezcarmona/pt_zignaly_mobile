@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 export function PhoneCard({ item }) {
   return (
-    <div>
+    <div className="phone-card">
       <Link to={`/phone/${item._id}`} style={{ textDecoration: 'none' }}>
         <Card style={{ width: '18rem' }}>
           <Card.Img
